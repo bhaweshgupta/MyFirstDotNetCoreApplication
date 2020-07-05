@@ -1,0 +1,13 @@
+﻿@page
+@using MyFirstDotNetCoreApplication.Components
+@model ProductsModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
+
